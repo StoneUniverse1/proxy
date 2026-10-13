@@ -1,6 +1,6 @@
-package de.jozelot.stoneUniverse_Proxy.data.redis;
+package de.jozelot.stoneuniverse.data.redis;
 
-import de.jozelot.stoneUniverse_Proxy.StoneUniverse;
+import de.jozelot.stoneuniverse.StoneUniverse;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -13,7 +13,7 @@ public class RedisConnection {
     private JedisPool jedisPool;
     private String redisPrefix;
 
-    public RedisConnection(StoneUniverse bot) {
+    public RedisConnection(StoneUniverse plugin) {
         this.plugin = plugin;
     }
 

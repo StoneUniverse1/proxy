@@ -62,9 +62,6 @@ build/
 hs_err_pid*
 replay_pid*
 
-config.yml
-hosts.yml
-
 logs/
 .idea/
 .junie/

@@ -1,4 +1,4 @@
-package de.jozelot.stoneUniverse_Proxy.interfaces;
+package de.jozelot.stoneuniverse.interfaces;
 
 public interface Bootstrap {
     boolean register();
