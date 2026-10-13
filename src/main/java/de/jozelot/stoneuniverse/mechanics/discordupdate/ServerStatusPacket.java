@@ -13,17 +13,22 @@ public class ServerStatusPacket implements Packet{
 
     private double tps;
     private double mspt;
+    private int maxPlayers;
     private List<PlayerDto> players;
 
-    public ServerStatusPacket(double tps, double mspt, List<PlayerDto> players) {
+    public ServerStatusPacket(double tps, double mspt, List<PlayerDto> players, int maxPlayers) {
         this.tps = tps;
         this.mspt = mspt;
         this.players = players;
+        this.maxPlayers = maxPlayers;
     }
 
     public double getTps() { return tps; }
     public double getMspt() { return mspt; }
     public List<PlayerDto> getPlayers() { return players; }
+    public int getMaxPlayers() {
+        return maxPlayers;
+    }
 
     public static class PlayerDto {
         private String uuid;

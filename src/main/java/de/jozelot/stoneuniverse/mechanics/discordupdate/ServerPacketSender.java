@@ -33,6 +33,7 @@ public class ServerPacketSender {
         var server = plugin.getServer();
         double tps = 20.0;
         double mspt = 0.0;
+        int maxPlayers = server.getConfiguration().getShowMaxPlayers();
 
         LuckPerms lp = LuckPermsProvider.get();
         var userManager = lp.getUserManager();
@@ -67,12 +68,12 @@ public class ServerPacketSender {
             ServerStatusPacket.PlayerDto dto = new ServerStatusPacket.PlayerDto(uuid.toString(), name, lpRank, lpName);
             players.add(dto);
         }
-        sendPacket(tps, mspt, players);
+        sendPacket(tps, mspt, players, maxPlayers);
     }
 
-    private void sendPacket(double tps, double mspt, List<ServerStatusPacket.PlayerDto> players) {
+    private void sendPacket(double tps, double mspt, List<ServerStatusPacket.PlayerDto> players, int maxPlayers) {
         try {
-            ServerStatusPacket packet = new ServerStatusPacket(tps, mspt, players);
+            ServerStatusPacket packet = new ServerStatusPacket(tps, mspt, players, maxPlayers);
             String jsonPayload = mapper.writeValueAsString(packet);
 
             try (Jedis jedis = plugin.getBootstrap().getRedisConnection().getResource()) {
