@@ -37,9 +37,9 @@ public class ConfigLoader {
 
             if (!configFile.exists()) {
                 logger.info("config.yml not found. Creating default configuration file.");
-                try (InputStream in = getClass().getClassLoader().getResourceAsStream("config-example.yml")) {
+                try (InputStream in = getClass().getClassLoader().getResourceAsStream("config.yml")) {
                     if (in == null) {
-                        logger.error("Default config-example.yml could not be found inside the jar resources!");
+                        logger.error("Default config.yml could not be found inside the jar resources!");
                         return false;
                     }
                     Files.copy(in, configFile.toPath());

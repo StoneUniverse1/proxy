@@ -83,13 +83,13 @@ public class RedisConnection {
     }
 
     public void startListeners() {
-        var redisConnection = bot.getBootstrap().getRedisConnection();
+        /*var redisConnection = plugin.getBootstrap().getRedisConnection();
         CompletableFuture.runAsync(() -> {
             try (var jedis = redisConnection.getResource()) {
                 jedis.psubscribe(new RedisManager(bot), "*");
             } catch (Exception e) {
                 logger.error("Fehler im Redis-Subscription-Loop: " + e.getMessage());
             }
-        });
+        });*/
     }
 }

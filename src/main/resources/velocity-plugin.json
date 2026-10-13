@@ -1,8 +1,8 @@
 {
-  "id": "stoneuniverse_proxy",
-  "name": "StoneUniverse_Proxy",
+  "id": "stoneuniverse",
+  "name": "StoneUniverse",
   "version": "${version}",
-  "main": "de.jozelot.stoneUniverse_Proxy.StoneUniverse_Proxy",
+  "main": "de.jozelot.stoneuniverse.StoneUniverse",
   "description": "Proxy Plugin für StoneUniverse",
   "url": "https://jozelot.de",
   "authors": [

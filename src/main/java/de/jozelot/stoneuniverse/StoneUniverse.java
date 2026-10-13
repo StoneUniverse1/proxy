@@ -12,8 +12,6 @@ import org.slf4j.Logger;
 
 import java.nio.file.Path;
 
-@Plugin(id = "stoneuniverse", name = "StoneUniverse", version = "1.0.0",
-        url = "https://jozelot.de", description = "Proxy Plugin for StoneUniverse", authors = {"jozelot_"})
 public class StoneUniverse {
 
     private PluginBootstrap bootstrap;
