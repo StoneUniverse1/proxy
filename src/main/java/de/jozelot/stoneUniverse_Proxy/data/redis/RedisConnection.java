@@ -1,8 +1,6 @@
 package de.jozelot.stoneUniverse_Proxy.data.redis;
 
-import de.jozelot.stoneUniverse_Proxy.StoneUniverse_Proxy;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import de.jozelot.stoneUniverse_Proxy.StoneUniverse;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -11,11 +9,11 @@ import java.util.concurrent.CompletableFuture;
 
 public class RedisConnection {
 
-    private final StoneUniverse_Proxy plugin;
+    private final StoneUniverse plugin;
     private JedisPool jedisPool;
     private String redisPrefix;
 
-    public RedisConnection(StoneUniverse_Proxy bot) {
+    public RedisConnection(StoneUniverse bot) {
         this.plugin = plugin;
     }
 

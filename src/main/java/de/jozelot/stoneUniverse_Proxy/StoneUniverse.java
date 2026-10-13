@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 
 @Plugin(id = "stoneuniverse", name = "StoneUniverse", version = "1.0.0",
         url = "https://jozelot.de", description = "Proxy Plugin for StoneUniverse", authors = {"jozelot_"})
-public class StoneUniverse_Proxy {
+public class StoneUniverse {
 
     private PluginBootstrap bootstrap;
 
@@ -19,7 +19,7 @@ public class StoneUniverse_Proxy {
     private final ProxyServer server;
 
     @Inject
-    public StoneUniverse_Proxy(ProxyServer server, Logger logger) {
+    public StoneUniverse(ProxyServer server, Logger logger) {
         this.server = server;
         this.logger = logger;
 
