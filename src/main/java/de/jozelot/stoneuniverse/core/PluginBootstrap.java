@@ -3,6 +3,8 @@ package de.jozelot.stoneuniverse.core;
 import de.jozelot.stoneuniverse.StoneUniverse;
 import de.jozelot.stoneuniverse.data.config.ConfigLoader;
 import de.jozelot.stoneuniverse.data.config.ConfigManager;
+import de.jozelot.stoneuniverse.data.config.lang.LangLoader;
+import de.jozelot.stoneuniverse.data.config.lang.LangManager;
 import de.jozelot.stoneuniverse.data.redis.RedisConnection;
 import de.jozelot.stoneuniverse.interfaces.Bootstrap;
 import de.jozelot.stoneuniverse.interfaces.Registry;
@@ -16,6 +18,8 @@ public class PluginBootstrap implements Bootstrap {
 
     private ConfigLoader configLoader;
     private ConfigManager configManager;
+    private LangLoader langLoader;
+    private LangManager langManager;
 
     private Registry listenerRegistry;
     private Registry commandRegistry;
@@ -33,6 +37,8 @@ public class PluginBootstrap implements Bootstrap {
     public boolean register() {
         this.configLoader = new ConfigLoader(plugin, plugin.getDataDirectory());
         this.configManager = new ConfigManager(plugin);
+        this.langLoader = new LangLoader(plugin, plugin.getDataDirectory());
+        this.langManager = new LangManager(plugin);
         this.listenerRegistry = new ListenerRegistry(plugin);
         this.commandRegistry = new CommandRegistry(plugin);
         this.redisConnection = new RedisConnection(plugin);
@@ -44,6 +50,7 @@ public class PluginBootstrap implements Bootstrap {
     @Override
     public boolean enable() {
         if (!configLoader.load()) return false;
+        if (!langLoader.load()) return false;
         if (!listenerRegistry.register()) return false;
         if (!commandRegistry.register()) return false;
         if (!redisConnection.init()) return false;
@@ -64,6 +71,9 @@ public class PluginBootstrap implements Bootstrap {
 
     public ConfigManager getConfig() {
         return configManager;
+    }
+    public LangManager getLang() {
+        return langManager;
     }
     public RedisConnection getRedisConnection() {
         return redisConnection;

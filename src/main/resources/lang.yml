@@ -1,0 +1,31 @@
+# ======================================================
+#            StoneUniverse Language Configuration
+# ======================================================
+# Unterstützt MiniMessage / Formatted Text
+# Verfügbare Platzhalter werden pro Abschnitt angegeben.
+
+system:
+  error:
+    player-not-found: "<dark_gray>╎</dark_gray> <red><bold>‼ ᴇʀʀᴏʀ</bold> <dark_gray>›</dark_gray> <white>ᴅᴇʀ ꜱᴘɪᴇʟᴇʀ <yellow>{target}</yellow> ᴡᴜʀᴅᴇ ɴɪᴄʜᴛ ɢᴇꜰᴜɴᴅᴇɴ</white>"
+
+commands:
+  playerinfo:
+    success:
+    - ""
+    - "  <#00A4FC>┃</#00A4FC> <#00f4fc><bold>ꜱᴘɪᴇʟᴇʀ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴᴇɴ</bold>"
+    - "  <dark_gray>╎</dark_gray> <white>ᴅᴇᴛᴀɪʟꜱ ᴢᴜ: <yellow>{player}</yellow>"
+    - ""
+    - "  <dark_gray>╎</dark_gray> <#A78BFA><bold>⌘ ᴀʟʟɢᴇᴍᴇɪɴ</bold>"
+    - "  <dark_gray>╎</dark_gray> <white>ᴜᴜɪᴅ: <yellow><click:copy_to_clipboard:'{uuid}'><hover:show_text:'ᴋʟɪᴄᴋᴇɴ ᴢᴜᴍ ᴋᴏᴘɪᴇʀᴇɴ'>{uuid}</hover></click></yellow>"
+    - "  <dark_gray>╎</dark_gray> <white>ᴠᴇʀꜱɪᴏɴ: <yellow>{version}</yellow> <dark_gray>(</dark_gray><yellow>{protocol}</yellow><dark_gray>)</dark_gray>"
+    - "  <dark_gray>╎</dark_gray> <white>ᴄʟɪᴇɴᴛ: <yellow>{client}</yellow>"
+    - "  <dark_gray>╎</dark_gray> <white>ᴏɴʟɪɴᴇ ꜱᴇɪᴛ: <yellow>{online_time}</yellow>"
+    - ""
+    - "  <dark_gray>╎</dark_gray> <#38BDF8><bold>↯ ᴠᴇʀʙɪɴᴅᴜɴɢ</bold>"
+    - "  <dark_gray>╎</dark_gray> <white>ꜱᴇʀᴠᴇʀ: <yellow>{server}</yellow> <dark_gray>"
+    - "  <dark_gray>╎</dark_gray> <white>ᴘɪɴɢ: <yellow>{ping}ᴍꜱ</yellow>"
+    - "  <dark_gray>╎</dark_gray> <white>ɪᴘ-ᴀᴅʀᴇꜱꜱᴇ: <yellow><click:copy_to_clipboard:'{ip}'><hover:show_text:'ᴋʟɪᴄᴋᴇɴ ᴢᴜᴍ ᴋᴏᴘɪᴇʀᴇɴ'>{ip}</hover></click></yellow>"
+    - ""
+    - "  <dark_gray>╎</dark_gray> <#F472B6><bold>⚑ ꜱɪᴄʜᴇʀʜᴇɪᴛ</bold>"
+    - "  <dark_gray>╎</dark_gray> <white>ᴢᴡᴇɪᴛᴀᴄᴄᴏᴜɴᴛꜱ: <yellow>{alts}</yellow>"
+    - ""

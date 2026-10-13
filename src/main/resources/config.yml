@@ -1,5 +1,5 @@
 ##################################################################################
-##               Copyright (c) 2026 jozelot. All rights reserved.               ##
+##               Copyright (c) 2026 StoneUniverse. All rights reserved.               ##
 ##                                                                              ##
 ##                                                                              ##
 ## Author: jozelot_                                                             ##
@@ -17,3 +17,13 @@ redis:
   host: localhost
   port: 6379
   password: ''
+
+
+##################################################################################
+##                                                                              ##
+##                                  PERMISSIONS                                 ##
+##                                                                              ##
+##################################################################################
+
+
+# stoneuniverse.commands.playerinfo.use
