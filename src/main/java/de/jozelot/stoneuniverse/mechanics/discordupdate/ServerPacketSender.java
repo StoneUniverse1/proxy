@@ -47,6 +47,7 @@ public class ServerPacketSender {
 
             String lpRank = "default";
             String lpName = "Default";
+            int lpWeight = 0;
 
             try {
                 User user = userManager.loadUser(uuid).join();
@@ -60,12 +61,15 @@ public class ServerPacketSender {
                     } else {
                         lpName = lpRank;
                     }
+                    if (group != null && group.getWeight().isPresent()) {
+                        lpWeight = group.getWeight().getAsInt();
+                    }
                 }
                 // System.out.println("lpname: " + lpName +  " | lprank: " + lpRank);
             } catch (Exception e) {
             }
 
-            ServerStatusPacket.PlayerDto dto = new ServerStatusPacket.PlayerDto(uuid.toString(), name, lpRank, lpName);
+            ServerStatusPacket.PlayerDto dto = new ServerStatusPacket.PlayerDto(uuid.toString(), name, lpRank, lpName, lpWeight);
             players.add(dto);
         }
         sendPacket(tps, mspt, players, maxPlayers);

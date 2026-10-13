@@ -35,17 +35,20 @@ public class ServerStatusPacket implements Packet{
         private String name;
         private String lp_rank;
         private String lp_name;
+        private int lp_weight;
 
-        public PlayerDto(String uuid, String name, String lp_rank, String lp_name) {
+        public PlayerDto(String uuid, String name, String lp_rank, String lp_name, int lp_weight) {
             this.uuid = uuid;
             this.name = name;
             this.lp_rank = lp_rank;
             this.lp_name = lp_name;
+            this.lp_weight = lp_weight;
         }
 
         public String getUuid() { return uuid; }
         public String getName() { return name; }
         public String getLpRank() { return lp_rank; }
         public String getLpName() { return lp_name; }
+        public int getLpWeight() { return lp_weight; }
     }
 }
