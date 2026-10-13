@@ -7,6 +7,7 @@ import de.jozelot.stoneuniverse.data.redis.RedisConnection;
 import de.jozelot.stoneuniverse.interfaces.Bootstrap;
 import de.jozelot.stoneuniverse.interfaces.Registry;
 import de.jozelot.stoneuniverse.mechanics.discordupdate.ServerPacketSender;
+import de.jozelot.stoneuniverse.registry.CommandRegistry;
 import de.jozelot.stoneuniverse.registry.ListenerRegistry;
 
 public class PluginBootstrap implements Bootstrap {
@@ -17,6 +18,7 @@ public class PluginBootstrap implements Bootstrap {
     private ConfigManager configManager;
 
     private Registry listenerRegistry;
+    private Registry commandRegistry;
 
     private RedisConnection redisConnection;
     private ServerPacketSender serverPacketSender;
@@ -32,6 +34,7 @@ public class PluginBootstrap implements Bootstrap {
         this.configLoader = new ConfigLoader(plugin, plugin.getDataDirectory());
         this.configManager = new ConfigManager(plugin);
         this.listenerRegistry = new ListenerRegistry(plugin);
+        this.commandRegistry = new CommandRegistry(plugin);
         this.redisConnection = new RedisConnection(plugin);
         this.serverPacketSender = new ServerPacketSender(plugin);
         this.heartBeat = new HeartBeat(plugin);
@@ -42,6 +45,7 @@ public class PluginBootstrap implements Bootstrap {
     public boolean enable() {
         if (!configLoader.load()) return false;
         if (!listenerRegistry.register()) return false;
+        if (!commandRegistry.register()) return false;
         if (!redisConnection.init()) return false;
         heartBeat.start();
         return true;
