@@ -36,7 +36,8 @@ public class PlayerInfoCommand implements JCommand {
                 .then(RequiredArgumentBuilder.<CommandSource, String>argument("target", StringArgumentType.word())
                         .suggests((context, builder) -> {
                             for (Player player : plugin.getServer().getAllPlayers()) {
-                                builder.suggest(player.getUsername());
+                                String username = player.getUsername();
+                                if (username.toLowerCase().startsWith(context.getInput().toLowerCase())) builder.suggest(username);
                             }
                             return builder.buildFuture();
                         })

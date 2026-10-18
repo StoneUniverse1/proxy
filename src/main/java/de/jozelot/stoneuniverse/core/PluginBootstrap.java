@@ -66,7 +66,8 @@ public class PluginBootstrap implements Bootstrap {
 
     @Override
     public void reload() {
-
+        configLoader.load();
+        langManager.load();
     }
 
     public ConfigManager getConfig() {

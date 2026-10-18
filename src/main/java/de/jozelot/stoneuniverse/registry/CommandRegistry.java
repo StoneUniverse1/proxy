@@ -1,7 +1,9 @@
 package de.jozelot.stoneuniverse.registry;
 
 import de.jozelot.stoneuniverse.StoneUniverse;
+import de.jozelot.stoneuniverse.commands.FindCommand;
 import de.jozelot.stoneuniverse.commands.PlayerInfoCommand;
+import de.jozelot.stoneuniverse.commands.StoneUniverseCommand;
 import de.jozelot.stoneuniverse.interfaces.JCommand;
 import de.jozelot.stoneuniverse.interfaces.Registry;
 
@@ -18,7 +20,9 @@ public class CommandRegistry implements Registry {
 
     @Override
     public boolean register() {
+        registerCommands(new StoneUniverseCommand(plugin), List.of("stoneuniverse", "stu"));
         registerCommands(new PlayerInfoCommand(plugin), List.of("playerinfo", "pinfo"));
+        registerCommands(new FindCommand(plugin), List.of("find"));
         return true;
     }
 

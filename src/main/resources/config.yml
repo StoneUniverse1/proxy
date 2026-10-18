@@ -27,3 +27,6 @@ redis:
 
 
 # stoneuniverse.commands.playerinfo.use
+# stoneuniverse.commands.find.use
+
+# stoneuniverse.admin

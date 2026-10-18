@@ -9,6 +9,9 @@ system:
     player-not-found: "<dark_gray>╎</dark_gray> <red><bold>‼ ᴇʀʀᴏʀ</bold> <dark_gray>›</dark_gray> <white>ᴅᴇʀ ꜱᴘɪᴇʟᴇʀ <yellow>{target}</yellow> ᴡᴜʀᴅᴇ ɴɪᴄʜᴛ ɢᴇꜰᴜɴᴅᴇɴ</white>"
 
 commands:
+  stoneuniverse:
+    reload:
+      success: "<dark_gray>╎</dark_gray> <green><bold>✔</bold> <dark_gray>›</dark_gray> <white>ᴅɪᴇ ᴋᴏɴꜰɪɢᴜʀᴀᴛɪᴏɴ ᴡᴜʀᴅᴇ ᴇʀꜰᴏʟɢʀᴇɪᴄʜ ɴᴇᴜ ɢᴇʟᴀᴅᴇɴ</white>"
   playerinfo:
     success:
     - ""
@@ -29,3 +32,5 @@ commands:
     - "  <dark_gray>╎</dark_gray> <#F472B6><bold>⚑ ꜱɪᴄʜᴇʀʜᴇɪᴛ</bold>"
     - "  <dark_gray>╎</dark_gray> <white>ᴢᴡᴇɪᴛᴀᴄᴄᴏᴜɴᴛꜱ: <yellow>{alts}</yellow>"
     - ""
+  find:
+    success: "<#00A4FC>┃</#00A4FC> <#00f4fc><bold>ꜰɪɴᴅ</bold> <dark_gray>›</dark_gray> <white>ᴅᴇʀ ꜱᴘɪᴇʟᴇʀ <yellow>{player}</yellow> ʙᴇꜰɪɴᴅᴇᴛ ꜱɪᴄʜ ᴀᴜꜰ <yellow>{server}</yellow></white>"
